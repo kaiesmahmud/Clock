@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+ *{
+     box-sizing: border-box;
+     margin: 0;
+     padding:0;
+ }
+ body{
+     background-image: url("../images/colorfulBg.jpg");
+     background-size: cover;
+     background-position: center center;
+     min-height: 100vh;
+     font-family: 'Poppins', sans-serif;
+     transition: all 0.6s ease-in ;
+ }
+ .bg{
+     position: relative;
+    font-size: 40px;
+    color:#fff;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items:center;
+     justify-content: center;
+     
+ }
+ .time{
+     color: rgb(133, 255, 249);
+     stroke: black;
+     stroke-width: 20px;
+     opacity: 0.8;
+     transition: all 0.3s ease  ;
+ }
+ .clock{
+     display: flex;
+     align-items:center;
+     justify-content: space-around;
+ }
+ .box{
+     min-width: 120px;
+     text-align: center;
+     background-color: #fff;
+     opacity: 0.5;
+     color: black;
+     border-radius: 30%;
+     padding: 30px;
+     margin: 5px;
+ }
+ #session{
+    color:rgb(33, 53, 53);
+ }
+ .clock-detail{
+     color:rgb(33, 53, 53);
+     font-size: 20px;
+     display: flex;
+     align-items:center;
+     justify-content: center;
+    }
+.clock-detail .box-name{
+     padding:30px 30px 30px 10px;
+ }
+ .low{
+     position:fixed;
+     top:0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width:100%;
+     height: 100%;
+     background-color: #fff;
+     opacity: 0.3;
+     z-index: 0;
+ }
+ footer{
+     position: absolute;
+     text-align: center;
+     margin: 15px;
+     bottom: 0;
+     left:50%;
+     padding: 10px;
+     opacity: 0.6;
+     font-size: 50%;
+     border-radius: 10px;
+     background-color: white;
+     transform: translateX(-50%);
+ }
+ @media screen and (max-width: 992px) {
+    body 
+    {
+        background-image: url("../images/animateBG.jpg");
+    }
+    .time
+    {
+        color: rgb(49, 77, 75);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    body 
+    {
+        background-image: url("../images/clockBg.jpg");
+    }
+    .time
+    {
+        color: rgb(33, 79, 233);
+        font-size: 30px;
+    }
+    .bg
+    {
+        font-size: 20px;
+    }
+    .box
+    {
+        min-width: 90px;
+        background-color: rgb(167, 174, 233);
+    }
+    .clock-detail
+    {
+        font-size: 15px;
+    }
+}
