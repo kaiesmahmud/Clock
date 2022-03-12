@@ -1,7 +1,7 @@
 let hour = document.getElementById('hour');
 let minute = document.getElementById('minute');
 let second = document.getElementById('second');
-let session = document.getElementsByClassName('session');
+let session = document.getElementById('session');
 
 let days = document.getElementById('day');
 let months = document.getElementById('month');
@@ -14,8 +14,8 @@ let displayTime = () =>{
     let hrs = date.getHours();
     let min = date.getMinutes();
     let sec = date.getSeconds();
-   
-    // console.log(hrs , min , sec);
+    let sesn = "";
+        // console.log(hrs , min , sec);
     if(hrs <10){
         hrs = "0"+hrs;
     };
@@ -26,15 +26,17 @@ let displayTime = () =>{
         sec = "0"+sec;
     } ;
     if(hrs >=12){
-        session.innerHTML = "PM";
+        sesn = "PM";
     }else{
-        session.innerHtml = "AM";
+        sesn = "AM";
     }
     
    
     hour.innerHTML = hrs;
     minute.innerHTML = min;
     second.innerHTML = sec;
+    session.innerHTML = sesn;
+    console.log(session)
     // return hour , minute,second ;
 }
 setInterval(displayTime,1000);
